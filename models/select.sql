@@ -15,4 +15,3 @@ select count(QUANTITY_PURCHASED) from db1.s1.d_survey group by ITEM_PURCHASED;
 select sum(QUANTITY_PURCHASED) as QUANTITY_PURCHASED,ITEM_PURCHASED from db1.s1.d_survey group by ITEM_PURCHASED having sum(QUANTITY_PURCHASED)=(
 select max(QUANTITY_PURCHASED) from(
 select sum(QUANTITY_PURCHASED) as QUANTITY_PURCHASED from db1.s1.d_survey group by ITEM_PURCHASED));
- 
