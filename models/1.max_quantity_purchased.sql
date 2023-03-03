@@ -1,6 +1,6 @@
 with max_purchased as 
     (select max(quantity_purchased) as m1 from {{ ref('d_survey') }})
-select u.username from max_purchased as mqp,
+select u.username as Usernamefrom max_purchased as mqp,
 {{ ref('d_survey') }} s
 join 
 {{ ref('d_user') }} u 
