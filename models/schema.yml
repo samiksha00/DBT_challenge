@@ -1,0 +1,61 @@
+version: 2
+
+models:
+    - name: survey
+      description: "Count the number of rows"
+      columns:
+          - name: survey_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: user
+      description: "Users"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: category
+      description: "Category"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: item
+      description: "item"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: max_quantity_purchased
+      description: "max quality purchased"
+      columns:
+          - name: Username
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: highest_category
+      description: "sum_highest_category"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    - name: most_parent
+      description: "most_parent"
+      columns:
+          - name: category_name
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          

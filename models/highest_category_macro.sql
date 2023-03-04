@@ -5,8 +5,8 @@ max_QUANTITY_PURCHASED as(
 select c.id,c.name
 from {{ highest() }} s , max_QUANTITY_PURCHASED m
 join
-{{ ref('d_item') }} i
+{{ ref('item') }} i
 join
-{{ ref('d_category') }} c
+{{ ref('category') }} c
 on i.parent=c.id
-where sum_QUANTITY=max_purchased and s.sum_item=i.id ;
+where sum_QUANTITY=max_purchased and s.sum_item=i.id 
