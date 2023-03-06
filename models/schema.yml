@@ -9,6 +9,7 @@ models:
             tests:
                 - unique
                 - not_null
+                - row_count
     - name: user
       description: "Users"
       columns:
